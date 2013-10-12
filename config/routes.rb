@@ -1,4 +1,6 @@
 Paporeto::Application.routes.draw do
+  resources :categories
+
   resources :articles
 
   # The priority is based upon order of creation: first created -> highest priority.

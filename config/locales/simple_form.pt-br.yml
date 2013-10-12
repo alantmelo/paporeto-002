@@ -28,6 +28,8 @@ pt-BR:
     #     password: '****'
   helpers:
     submit:
+      create: 'Criar'
+      update: 'Editar'
       article:
         create: 'Criar artigo'
         update: 'Editar artigo'
