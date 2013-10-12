@@ -29,3 +29,5 @@ gem 'turbolinks'
 
 gem 'simple_form'
 gem 'slim-rails'
+
+gem 'xray-rails', group: :development
