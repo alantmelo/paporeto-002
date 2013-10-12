@@ -1,4 +1,7 @@
-p#notice = notice
+- if notice
+  .alert.alert-info.alert-dismissable
+    button type="button" class="close" data-dismiss="alert" aria-hidden="true" &times; 
+    = notice
 
 h1 
   = @article.title
