@@ -11,7 +11,7 @@ table.table.table-striped
     - @articles.each do |article|
       tr
         td = article.title
-        td = article.published_at
+        td = l article.published_at
         td
           .btn-group.pull-right
             = link_to 'Ver', article, class: 'btn btn-default btn-sm'
