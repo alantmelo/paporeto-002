@@ -8,7 +8,7 @@ table.table.table-striped
       th
 
   tbody
-    - @articles.each do |article|
+    - @articles.order(published_at: :desc).order(:title).each do |article|
       tr
         td = article.title
         td = l article.published_at
