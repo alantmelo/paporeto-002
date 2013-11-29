@@ -6,8 +6,8 @@
 h1 
   = @article.title
   .pull-right
-    = link_to 'Edit', edit_article_path(@article), class: 'btn btn-default'
+    = link_to 'Editar', edit_article_path(@article), class: 'btn btn-default'
 
 hr
-p = @article.published_at
+p = l @article.published_at
 = simple_format @article.body
