@@ -19,6 +19,7 @@ pt-BR:
         title: Título
         body: Texto
         published_at: Publicado em
+        category: Categoria
     # hints:
     #   defaults:
     #     password: 'Mínimo de 8 caracteres.'

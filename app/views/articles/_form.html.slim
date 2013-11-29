@@ -3,6 +3,7 @@
 
   .form-inputs
     = f.input :title
+    = f.association :category, prompt: 'Selecione'
     = f.input :body
     = f.input :published_at
 
