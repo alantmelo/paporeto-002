@@ -9,5 +9,8 @@ h1
     = link_to 'Editar', edit_article_path(@article), class: 'btn btn-default'
 
 hr
+
+strong = @article.category.name
+
 p = l @article.published_at
 = simple_format @article.body
