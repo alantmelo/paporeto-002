@@ -5,6 +5,7 @@ table.table.table-striped
     tr
       th Título
       th Publicado em
+      th Categoria
       th
 
   tbody
@@ -12,6 +13,7 @@ table.table.table-striped
       tr
         td = article.title
         td = l article.published_at
+        td = article.category.name
         td
           .btn-group.pull-right
             = link_to 'Ver', article, class: 'btn btn-default btn-sm'
