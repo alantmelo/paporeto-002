@@ -1,3 +1,5 @@
+- @articles = Article.order(published_at: :desc).order(:title)
+
 h1 Artigos
 
 table.table.table-striped
@@ -9,7 +11,7 @@ table.table.table-striped
       th
 
   tbody
-    - @articles.order(published_at: :desc).order(:title).each do |article|
+    - @articles.each do |article|
       tr
         td = article.title
         td = l article.published_at
