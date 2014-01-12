@@ -14,13 +14,11 @@ html
     .navbar.navbar-inverse.navbar-fixed-top
      .container
        .navbar-header
-         a class="navbar-brand" href="/articles" Paporeto
+          = link_to 'Paporeto', root_path, class: 'navbar-brand'
        .navbar-collapse
          ul.nav.navbar-nav
-           li.active 
-             a href="/articles" Artigos
-           li
-             a href="/categories" Categorias
+           li.active = link_to 'Artigos', articles_path
+           li = link_to 'Categorias', categories_path
 
     .container
       = yield
