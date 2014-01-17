@@ -3,7 +3,7 @@ class ArticlesController < ApplicationController
 
   # GET /articles
   def index
-    @articles = Article.all
+    @articles = Article.order(published_at: :desc).order(:title)
   end
 
   # GET /articles/1
