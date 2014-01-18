@@ -12,14 +12,15 @@ html
   body
 
     .navbar.navbar-inverse.navbar-fixed-top
-     .container
-       .navbar-header
-          = link_to 'Paporeto', root_path, class: 'navbar-brand'
-       .navbar-collapse
-         ul.nav.navbar-nav
-           li.active = link_to 'Artigos', articles_path
-           li = link_to 'Categorias', categories_path
+      .container
+        .navbar-header
+           = link_to 'Paporeto', root_path, class: 'navbar-brand'
+        .navbar-collapse
+          ul.nav.navbar-nav
+            li.active = link_to 'Artigos', articles_path
+            li = link_to 'Categorias', categories_path
 
     .container
+      p = params
       = yield
     = javascript_include_tag "application", "data-turbolinks-track" => true
