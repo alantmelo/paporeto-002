@@ -17,10 +17,12 @@ html
            = link_to 'Paporeto', root_path, class: 'navbar-brand'
         .navbar-collapse
           ul.nav.navbar-nav
-            li.active = link_to 'Artigos', articles_path
-            li = link_to 'Categorias', categories_path
+            li class="#{nav_status('articles')}" = link_to 'Artigos', articles_path
+            li class="#{nav_status('categories')}" = link_to 'Categorias', categories_path
 
     .container
-      p = params
+      .pull-right = today
+      h3 = maybe_friday
+
       = yield
     = javascript_include_tag "application", "data-turbolinks-track" => true
