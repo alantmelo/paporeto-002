@@ -3,6 +3,7 @@ Paporeto::Application.routes.draw do
   resources :categories, except: :show
 
   resources :articles
+  resources :users
 
   root 'articles#index'
 
