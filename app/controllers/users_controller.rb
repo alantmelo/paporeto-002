@@ -1,13 +1,10 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:show, :edit, :update, :destroy]
+  before_action :set_user, only: [:edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /users
   def index
     @users = User.all
-  end
-
-  # GET /users/1
-  def show
   end
 
   # GET /users/new
@@ -24,7 +21,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
 
     if @user.save
-      redirect_to @user, notice: 'User was successfully created.'
+      redirect_to users_url
     else
       render action: 'new'
     end
@@ -32,8 +29,18 @@ class UsersController < ApplicationController
 
   # PATCH/PUT /users/1
   def update
-    if @user.update(user_params)
-      redirect_to @user, notice: 'User was successfully updated.'
+    if user_params[:password].blank?
+      @user.update_without_password(user_params_without_password)
+    else
+      @user.update(user_params)
+    end
+
+    if @user.valid?
+      if @user == current_user
+        sign_in(@user, bypass: true)
+      end
+
+      redirect_to users_url
     else
       render action: 'edit'
     end
@@ -42,7 +49,7 @@ class UsersController < ApplicationController
   # DELETE /users/1
   def destroy
     @user.destroy
-    redirect_to users_url, notice: 'User was successfully destroyed.'
+    redirect_to users_url, notice: 'Usuário excluído.'
   end
 
   private
@@ -54,5 +61,11 @@ class UsersController < ApplicationController
     # Only allow a trusted parameter "white list" through.
     def user_params
       params.require(:user).permit(:name, :email, :password, :password_confirmation)
+    end
+
+    def user_params_without_password
+      user_params.delete(:password)
+      user_params.delete(:password_confirmation)
+      user_params
     end
 end

@@ -1,25 +1,21 @@
-h1 Listing users
+h1 Usuários
 
-table
-  tr
-    th Name
-    th Email
-    th Password
-    th Password confirmation
-    th
-    th
-    th
-
-  - @users.each do |user|
+table.table.table-striped
+  thead
     tr
-      td = user.name
-      td = user.email
-      td = user.password
-      td = user.password_confirmation
-      td = link_to 'Show', user
-      td = link_to 'Edit', edit_user_path(user)
-      td = link_to 'Destroy', user, data: {:confirm => 'Are you sure?'}, :method => :delete
+      th Nome
+      th Email
+      th
+  tboby
+    - @users.each do |user|
+      tr
+        td = user.name
+        td = user.email
+        td
+          .btn-group.pull-right 
+            = link_to 'Editar', edit_user_path(user), class: 'btn btn-default btn-sm'
+            = link_to 'Excluir', user, data: {:confirm => 'Tem certeza?'}, :method => :delete, class: 'btn btn-default btn-sm'
 
 br
 
-= link_to 'New User', new_user_path
+= link_to 'Criar usuário', new_user_path, class: 'btn btn-primary'
