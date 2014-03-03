@@ -1,4 +1,5 @@
 Paporeto::Application.routes.draw do
+  mount Uploadbox::Engine => '/uploadbox', as: :uploadbox
   devise_for :users
   resources :categories, except: :show
 

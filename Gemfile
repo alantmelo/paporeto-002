@@ -37,4 +37,5 @@ gem 'start', '~> 0.1.1'
 
 gem 'devise', '~> 3.2.2'
 
-
+# upload
+gem 'uploadbox', '0.1.3'
