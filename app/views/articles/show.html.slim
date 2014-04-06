@@ -1,5 +1,5 @@
-- @page_class= 'noticias type-section'
-- @title= 'Notícias'
+- @page_class= "#{@category.name.parameterize} type-section"
+- @title= @category.name
 
 .container
   #main
@@ -21,7 +21,7 @@
   #sidebar
     section#more-articles
       section.category
-        h1 Notícias
+        h1 = @category.name
         article.featured
           = link_to do
             h2 Skateboarding Aenean eu leo quam. Pellentesque ornare sem lacinia.
