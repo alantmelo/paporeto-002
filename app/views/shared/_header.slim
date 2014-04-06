@@ -6,4 +6,4 @@ header#page-header
     nav#page-nav
       ul
         - @categories.each do |category|
-          li class="#{category.name.parameterize}" = link_to category.name, '#'
+          li class="#{category.name.parameterize}" = link_to category.name, category_articles_path(category)

@@ -15,7 +15,7 @@ section.latest-articles
 
     - @articles.each do |article|
       article
-        = link_to article do
+        = link_to [article.category, article] do
           = img article.image.thumb if article.image?
           h2 = article.title
           p = truncate(article.summary, length: 80)
