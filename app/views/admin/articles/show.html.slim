@@ -3,6 +3,7 @@ h1
   .pull-right
     = link_to 'Editar', edit_admin_article_path(@article), class: 'btn btn-default'
 
+p = @article.summary
 hr
 
 strong = @article.category.name
