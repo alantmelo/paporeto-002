@@ -7,7 +7,7 @@ class ArticlesController < ApplicationController
 
   def show
     @article = Article.find(params[:id])
-    @related_articles = @category.articles.order(published_at: :desc).where.not(id: @article.id)
+    @related_articles = @article.related_articles
   end
 
   private

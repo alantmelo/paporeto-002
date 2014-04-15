@@ -6,4 +6,8 @@ class Article < ActiveRecord::Base
   def to_param
     "#{id} #{title}".parameterize
   end
+
+  def related_articles
+    category.articles.order(published_at: :desc).where.not(id: id)
+  end
 end
