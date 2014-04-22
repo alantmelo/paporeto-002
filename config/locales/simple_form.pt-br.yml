@@ -21,6 +21,7 @@ pt-BR:
         body: Texto
         published_at: Publicado em
         category: Categoria
+        featured: Destaque
     # hints:
     #   defaults:
     #     password: 'Mínimo de 8 caracteres.'
