@@ -3,7 +3,7 @@ class ArticlesController < ApplicationController
 
   def index
     @articles = @category.articles.limit(8)
-    @featured_article = @category.articles.where(featured: true).first
+    @featured_article = @category.featured_article
   end
 
   def show
