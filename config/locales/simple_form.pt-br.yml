@@ -22,6 +22,7 @@ pt-BR:
         published_at: Publicado em
         category: Categoria
         featured: Destaque
+        featured_at_home: Destaque na Home
     # hints:
     #   defaults:
     #     password: 'Mínimo de 8 caracteres.'
