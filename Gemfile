@@ -1,13 +1,13 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.4'
+gem 'rails', '4.1.2'
 
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', '~> 1.3.8'
 
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.2'
+gem 'sass-rails', '~> 4.0.3'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
@@ -30,8 +30,11 @@ gem 'turbolinks', '~> 2.2.1'
 gem 'simple_form', '~> 3.0.1'
 gem 'slim-rails', '~> 2.1.0'
 
-gem 'xray-rails', '~> 0.1.12', group: :development
-gem 'pry-rails', '~> 0.3.2', group: :development
+group :development do
+  gem 'xray-rails', '~> 0.1.12'
+  gem 'pry-rails',  '~> 0.3.2'
+  gem 'spring',     '~> 1.1.3'
+end
 
 gem 'start', '~> 0.1.1'
 

@@ -16,6 +16,5 @@
 /tmp
 
 .DS_Store
-.env
-
 public/uploads
+config/secrets.yml
