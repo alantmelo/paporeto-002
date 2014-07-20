@@ -49,3 +49,10 @@ gem 'neat',            '~> 1.3.0'
 gem 'high_voltage',    '~> 2.1.0'
 gem 'normalize-rails', '~> 3.0'
 
+
+# better error page
+gem 'better_errors', '~> 1.1.0'
+
+# interactive error page
+gem 'binding_of_caller', '~> 0.7.2'
+

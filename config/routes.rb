@@ -1,7 +1,7 @@
 Paporeto::Application.routes.draw do
-  # Uploadbox  
+  # Uploadbox
   mount Uploadbox::Engine => '/uploadbox', as: :uploadbox
-  
+
   # Uploadbox
   devise_for :users
 
@@ -15,8 +15,8 @@ Paporeto::Application.routes.draw do
   end
 
   # Public ------------------------------------------------------------------------
-  
-  resources :categories, path: '', only: [] do
+
+  resources :categories, path: 'artigos', only: [] do
     resources :articles, path: '', only: [:index, :show]
   end
 
