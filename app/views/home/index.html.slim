@@ -3,6 +3,11 @@
 section#featured-article
   = render partial: 'home/featured_at_home', object: @featured_at_home
 
+- if notice
+  .send-news
+    .send-news-inner
+      p = notice
+
 section#more-articles
   = render partial: 'home/category', collection: @categories
 

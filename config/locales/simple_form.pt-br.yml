@@ -26,10 +26,14 @@ pt-BR:
     # hints:
     #   defaults:
     #     password: 'Mínimo de 8 caracteres.'
-    # placeholders:
-    #   defaults:
-    #     name: 'Nome'
-    #     password: '****'
+    placeholders:
+      suggested_article:
+        name: Digite seu nome
+        email: Digite seu email
+        body: Digite sua mensagem
+      defaults:
+        name: 'Nome'
+        password: '****'
   helpers:
     submit:
       create: 'Criar'

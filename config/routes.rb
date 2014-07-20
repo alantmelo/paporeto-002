@@ -1,4 +1,5 @@
 Paporeto::Application.routes.draw do
+
   # Uploadbox
   mount Uploadbox::Engine => '/uploadbox', as: :uploadbox
 
@@ -19,6 +20,8 @@ Paporeto::Application.routes.draw do
   resources :categories, path: 'artigos', only: [] do
     resources :articles, path: '', only: [:index, :show]
   end
+
+  resources :suggested_articles, only: [:new, :create]
 
   root 'home#index'
 end
