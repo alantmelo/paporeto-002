@@ -1,15 +1,13 @@
 class SuggestedArticleMailer < ActionMailer::Base
-  default from: "from@example.com"
+  def suggestion(suggested_article)
+    @suggested_article = suggested_article
 
-  def suggestion
-    @greeting = "Hi"
-
-    mail to: "to@example.org"
+    mail to: 'Editor do Paporeto <editor@paporeto.com>', from: "#{@suggested_article.name} <#{@suggested_article.email}>", subject: 'Paporeto: Sugestão de artigo'
   end
 
-  def thanks
-    @greeting = "Hi"
+  def thanks(suggested_article)
+    @suggested_article = suggested_article
 
-    mail to: "to@example.org"
+    mail to: "#{@suggested_article.name} <#{@suggested_article.email}>", from: 'Editor do Paporeto <editor@paporeto.com>', subject: 'Paporeto: Obrigado pela sugestão de artigo'
   end
 end

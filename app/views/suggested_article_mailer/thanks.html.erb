@@ -1,0 +1,9 @@
+<div>
+  <p>Obrigado <%= @suggested_article.name %>, por sua sugestão.</p>
+
+  <p>Para confirmar, essa foi a sugestão que enviou:</p>
+
+  <div>
+    <%= simple_format(@suggested_article.body) %>
+  </div>
+</div>

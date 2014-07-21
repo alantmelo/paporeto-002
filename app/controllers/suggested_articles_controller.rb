@@ -7,6 +7,10 @@ class SuggestedArticlesController < ApplicationController
     @suggested_article = SuggestedArticle.new(suggested_article_params)
 
     if @suggested_article.save
+
+      SuggestedArticleMailer.suggestion(@suggested_article).deliver!
+      SuggestedArticleMailer.thanks(@suggested_article).deliver!
+
       redirect_to root_path, notice: "Obrigado pela sugestão, #{@suggested_article.name}"
     else
       render :new

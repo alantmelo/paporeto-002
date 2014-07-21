@@ -56,3 +56,6 @@ gem 'better_errors', '~> 1.1.0'
 # interactive error page
 gem 'binding_of_caller', '~> 0.7.2'
 
+# css for emails
+gem 'premailer-rails', '~> 1.7.0'
+gem 'nokogiri', '~> 1.6.3'
